@@ -12,4 +12,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Onelook.Data\Onelook.Data.csproj" />
+    <ProjectReference Include="..\Onelook.Models\Onelook.Models.csproj" />
+  </ItemGroup>
+
 </Project>
