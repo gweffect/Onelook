@@ -42,7 +42,7 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@3.01
         with:
           # The name of the image you would like to push
-          name: gweffect/repository
+          name: gweffect/onelook
           # The login username for the registry
           username: ${{ secrets.DOCKER_USERNAME }}
           # The login password for the registry
