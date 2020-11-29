@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onelook.Web", "Onelook.Web\Onelook.Web.csproj", "{C42327E5-6DF9-4C3F-9698-54FB56865256}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onelook.Models", "Onelook.Models\Onelook.Models.csproj", "{D3C5E4B8-6084-4459-921B-C206CD9C976F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onelook.Services", "Onelook.Services\Onelook.Services.csproj", "{F85397B9-58EC-4D02-9CC7-319FAA669C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onelook.Data", "Onelook.Data\Onelook.Data.csproj", "{62933922-5F0A-4F18-ABAB-60297F04DC3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C5E4B8-6084-4459-921B-C206CD9C976F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C5E4B8-6084-4459-921B-C206CD9C976F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C5E4B8-6084-4459-921B-C206CD9C976F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C5E4B8-6084-4459-921B-C206CD9C976F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85397B9-58EC-4D02-9CC7-319FAA669C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85397B9-58EC-4D02-9CC7-319FAA669C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85397B9-58EC-4D02-9CC7-319FAA669C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85397B9-58EC-4D02-9CC7-319FAA669C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62933922-5F0A-4F18-ABAB-60297F04DC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62933922-5F0A-4F18-ABAB-60297F04DC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62933922-5F0A-4F18-ABAB-60297F04DC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62933922-5F0A-4F18-ABAB-60297F04DC3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

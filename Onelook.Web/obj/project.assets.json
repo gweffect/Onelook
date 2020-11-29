@@ -2,6 +2,30 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "FreeSql/2.0.101": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FreeSql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FreeSql.dll": {}
+        }
+      },
+      "FreeSql.Provider.PostgreSQL/2.0.101": {
+        "type": "package",
+        "dependencies": {
+          "FreeSql": "2.0.101",
+          "Newtonsoft.Json": "12.0.3",
+          "Npgsql.LegacyPostgis": "4.1.6",
+          "Npgsql.NetTopologySuite": "4.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/FreeSql.Provider.PostgreSQL.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FreeSql.Provider.PostgreSQL.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -176,6 +200,18 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Abstractions/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
       "Microsoft.Extensions.DependencyModel/5.0.0": {
         "type": "package",
         "compile": {
@@ -183,6 +219,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.2": {
@@ -199,6 +244,76 @@
         "build": {
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
           "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
+        }
+      },
+      "NetTopologySuite/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
+        }
+      },
+      "NetTopologySuite.IO.PostGis/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.PostGis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.PostGis.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Npgsql/4.1.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.6.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.LegacyPostgis/4.1.6": {
+        "type": "package",
+        "dependencies": {
+          "Npgsql": "4.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.LegacyPostgis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.LegacyPostgis.dll": {}
+        }
+      },
+      "Npgsql.NetTopologySuite/4.1.6": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite.IO.PostGIS": "2.0.0",
+          "Npgsql": "4.1.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.NetTopologySuite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.NetTopologySuite.dll": {}
         }
       },
       "System.Collections.Immutable/1.5.0": {
@@ -264,10 +379,73 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Onelook.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "FreeSql": "2.0.101",
+          "FreeSql.Provider.PostgreSQL": "2.0.101",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Onelook.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Onelook.Data.dll": {}
+        }
+      },
+      "Onelook.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Onelook.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Onelook.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Onelook.Models.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "FreeSql/2.0.101": {
+      "sha512": "BiudTbTLDejtOy/ifqXpaUuSYwVIb3Er6plxoEDqVKzBaMpkj5h8DQ7nAbTKdPs3b9Xl0QiA4y/x9LlfbW/c7A==",
+      "type": "package",
+      "path": "freesql/2.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "freesql.2.0.101.nupkg.sha512",
+        "freesql.nuspec",
+        "lib/net40/FreeSql.dll",
+        "lib/net40/FreeSql.xml",
+        "lib/net45/FreeSql.dll",
+        "lib/net45/FreeSql.xml",
+        "lib/netstandard2.0/FreeSql.dll",
+        "lib/netstandard2.0/FreeSql.xml",
+        "logo.png"
+      ]
+    },
+    "FreeSql.Provider.PostgreSQL/2.0.101": {
+      "sha512": "48IG9SeZYJZRzqQIUN5d19vo61SrIOIVupUD6myOASnm0dTsxsZXb+dr8xUhrAAWuqQ6GxR8HElGIyOe9N8MTg==",
+      "type": "package",
+      "path": "freesql.provider.postgresql/2.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "freesql.provider.postgresql.2.0.101.nupkg.sha512",
+        "freesql.provider.postgresql.nuspec",
+        "lib/net45/FreeSql.Provider.PostgreSQL.dll",
+        "lib/net451/FreeSql.Provider.PostgreSQL.dll",
+        "lib/net452/FreeSql.Provider.PostgreSQL.dll",
+        "lib/net461/FreeSql.Provider.PostgreSQL.dll",
+        "lib/netstandard2.0/FreeSql.Provider.PostgreSQL.dll",
+        "logo.png"
+      ]
+    },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/5.0.0": {
       "sha512": "+vVXw0oVVu5dnwseBxZFVeYZ0qPJTI03DTdghRKrcK+QhTM3Nu8orukKqdYObsI4mWZADE8wTILuYR5CowJr+w==",
       "type": "package",
@@ -518,6 +696,26 @@
         "microsoft.codeanalysis.razor.nuspec"
       ]
     },
+    "Microsoft.Extensions.Configuration.Abstractions/5.0.0": {
+      "sha512": "ETjSBHMp3OAZ4HxGQYpwyGsD8Sw5FegQXphi0rpoGMT74S4+I2mm7XJEswwn59XAaKOzC15oDSOWEE8SzDCd6Q==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.Extensions.DependencyModel/5.0.0": {
       "sha512": "umBECCoMC+sOUgm083yFr8SxTobUOcPFH4AXigdO2xJiszCHAnmeDl4qPphJt+oaJ/XIfV1wOjIts2nRnki61Q==",
       "type": "package",
@@ -540,6 +738,28 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
         "microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
         "microsoft.extensions.dependencymodel.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/5.0.0": {
+      "sha512": "cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Primitives.dll",
+        "lib/net461/Microsoft.Extensions.Primitives.xml",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -623,6 +843,115 @@
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
         "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
+      ]
+    },
+    "NetTopologySuite/2.0.0": {
+      "sha512": "3ajBClEI9wx2/DjjGmV52sHW1m52vLg8sdz1pJbTf5ySj1X90qehQs3v1DRwGo0F8UKj/Z2SjNhRN/6LroAkqg==",
+      "type": "package",
+      "path": "nettopologysuite/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "nettopologysuite.2.0.0.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    },
+    "NetTopologySuite.IO.PostGis/2.0.0": {
+      "sha512": "f4PAE9VTUfM8w+SOlFcsvn5/S9e5SQywmEPsCMAVgfiemwHw9NKSB4Jnn4+U/jl5hN9tUutHxpHnOUx2Pqm6Ew==",
+      "type": "package",
+      "path": "nettopologysuite.io.postgis/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NetTopologySuite.IO.PostGis.dll",
+        "lib/netstandard2.0/NetTopologySuite.IO.PostGis.xml",
+        "nettopologysuite.io.postgis.2.0.0.nupkg.sha512",
+        "nettopologysuite.io.postgis.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Npgsql/4.1.6": {
+      "sha512": "JXB41gWNXTOu+d9AfqgGLMY1B6OIuTOiX43PypKun5e4XWjKgzINwA0oryBm5ewAJrZGFQbhllxvdPXgToi2/Q==",
+      "type": "package",
+      "path": "npgsql/4.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Npgsql.dll",
+        "lib/net461/Npgsql.xml",
+        "lib/netcoreapp3.0/Npgsql.dll",
+        "lib/netcoreapp3.0/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.4.1.6.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
+      ]
+    },
+    "Npgsql.LegacyPostgis/4.1.6": {
+      "sha512": "ihCaYnwBwoQAZQuLSJ10hWhJDId6zrb2bhXnuvuTG9midb215d2DkdMzh2ZFin6aCBpS7+JJhb5qMDb2xyXO9A==",
+      "type": "package",
+      "path": "npgsql.legacypostgis/4.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Npgsql.LegacyPostgis.dll",
+        "lib/net461/Npgsql.LegacyPostgis.xml",
+        "lib/netstandard2.0/Npgsql.LegacyPostgis.dll",
+        "lib/netstandard2.0/Npgsql.LegacyPostgis.xml",
+        "npgsql.legacypostgis.4.1.6.nupkg.sha512",
+        "npgsql.legacypostgis.nuspec",
+        "postgresql.png"
+      ]
+    },
+    "Npgsql.NetTopologySuite/4.1.6": {
+      "sha512": "N0oOzAVr19gqqpAcZdPEBYSY4KngndQX6woO3/SDAq6AoCVHZnVPj2PW5z9Nch3P4NSJjqwr9JJPzIroKHbmXA==",
+      "type": "package",
+      "path": "npgsql.nettopologysuite/4.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Npgsql.NetTopologySuite.dll",
+        "lib/net461/Npgsql.NetTopologySuite.xml",
+        "lib/netstandard2.0/Npgsql.NetTopologySuite.dll",
+        "lib/netstandard2.0/Npgsql.NetTopologySuite.xml",
+        "npgsql.nettopologysuite.4.1.6.nupkg.sha512",
+        "npgsql.nettopologysuite.nuspec",
+        "postgresql.png"
       ]
     },
     "System.Collections.Immutable/1.5.0": {
@@ -786,12 +1115,24 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Onelook.Data/1.0.0": {
+      "type": "project",
+      "path": "../Onelook.Data/Onelook.Data.csproj",
+      "msbuildProject": "../Onelook.Data/Onelook.Data.csproj"
+    },
+    "Onelook.Models/1.0.0": {
+      "type": "project",
+      "path": "../Onelook.Models/Onelook.Models.csproj",
+      "msbuildProject": "../Onelook.Models/Onelook.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.0",
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.9"
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.9",
+      "Onelook.Data >= 1.0.0",
+      "Onelook.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -825,7 +1166,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Test\\Onelook\\Onelook.Data\\Onelook.Data.csproj": {
+              "projectPath": "E:\\Test\\Onelook\\Onelook.Data\\Onelook.Data.csproj"
+            },
+            "E:\\Test\\Onelook\\Onelook.Models\\Onelook.Models.csproj": {
+              "projectPath": "E:\\Test\\Onelook\\Onelook.Models\\Onelook.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
