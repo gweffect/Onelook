@@ -49,7 +49,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           # Use dockerfile when you would like to explicitly build a Dockerfile
           dockerfile: ./Onelook.Web/Dockerfile
-          # Use tag_names when you want to push tags/release by their git name
-          tag_names: onelook
           # Push semver docker tags. e.g. image:1.2.3, image:1.2, image:1
           tag_semver: image:1.1.1
