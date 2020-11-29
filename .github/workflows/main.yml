@@ -54,3 +54,4 @@ jobs:
           # Path to the Dockerfile
           file: ./Onelook.Web/Dockerfile
           push: true
+          tags: latest
