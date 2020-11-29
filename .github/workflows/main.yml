@@ -42,12 +42,10 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@3.01
         with:
           # The name of the image you would like to push
-          name: onelook
+          name: gweffect/repository
           # The login username for the registry
           username: ${{ secrets.DOCKER_USERNAME }}
           # The login password for the registry
           password: ${{ secrets.DOCKER_PASSWORD }}
           # Use dockerfile when you would like to explicitly build a Dockerfile
           dockerfile: ./Onelook.Web/Dockerfile
-          # Push semver docker tags. e.g. image:1.2.3, image:1.2, image:1
-          tag_semver: image:1.1.1
