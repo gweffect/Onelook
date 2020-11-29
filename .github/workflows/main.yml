@@ -51,5 +51,5 @@ jobs:
         # uses: docker/build-push-action@6925f94b6b8f23d547930f88b9886036ac92d510
         uses: docker/build-push-action@v2.2.0
         with:
-          # Build's context is the set of files located in the specified PATH or URL
-          context: ./Onelook.Web
+          # Path to the Dockerfile
+          file: ./Onelook.Web/Dockerfile
