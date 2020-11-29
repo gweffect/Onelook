@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onelook.Web", "Onelook.Web\Onelook.Web.csproj", "{C42327E5-6DF9-4C3F-9698-54FB56865256}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42327E5-6DF9-4C3F-9698-54FB56865256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {795EE5DC-0653-4283-B213-AA5FE5BCC89F}
+	EndGlobalSection
+EndGlobal

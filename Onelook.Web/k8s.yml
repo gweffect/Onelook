@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: one-look
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: one-look
+  template:
+    metadata:
+      labels:
+        app: one-look
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: api
+        image: okteto/one-look:aspnetcore
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: one-look
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+  labels:
+    app: one-look
+spec:
+  type: ClusterIP
+  ports:
+    - name: one-look
+      port: 5000
+  selector:
+    app: one-look
