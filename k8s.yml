@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
       - name: api
-        image: okteto/one-look:aspnetcore
+        image: gweffect/onelook
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
