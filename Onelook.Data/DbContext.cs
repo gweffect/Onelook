@@ -15,10 +15,11 @@ namespace Onelook.Data
         {
             configuration = _configuration;
 
-            var connPostgreSQL=configuration.GetConnectionString("PostgreSQL");
+            //var connPostgreSQL=configuration.GetConnectionString("PostgreSQL");
+            var connMySQL = configuration.GetConnectionString("MySQL");
 
             instance = new FreeSql.FreeSqlBuilder()
-                  .UseConnectionString(FreeSql.DataType.PostgreSQL, connPostgreSQL)
+                  .UseConnectionString(FreeSql.DataType.MySql, connMySQL)
                   .UseAutoSyncStructure(true) //自动同步实体结构到数据库
                   .Build();
             

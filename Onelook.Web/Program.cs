@@ -20,7 +20,9 @@ namespace Onelook.Web
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("http://*:5000").UseStartup<Startup>();
+                    webBuilder
+                    //.UseUrls("http://*:5000")
+                    .UseStartup<Startup>();
                 });
     }
 }
